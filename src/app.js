@@ -1,18 +1,10 @@
 import React from 'react';
+import AppAppBar from './views/header'
 
 const App = () => {
   return (
     <div>
-      <header>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppAppBar />
     </div>
   );
 }
