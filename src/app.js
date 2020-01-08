@@ -1,18 +1,16 @@
 import React from 'react';
+import AppAppBar from './views/header';
+import ProductHero from './views/zenithMain';
+import ZenithServices from './views/zenithServices'
+import ZenithReviews from './views/zenithReviews';
 
 const App = () => {
   return (
     <div>
-      <header>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppAppBar />
+      < ProductHero />
+      <ZenithServices />
+      <ZenithReviews />
     </div>
   );
 }
