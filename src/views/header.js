@@ -188,18 +188,9 @@ export default function AppAppBar() {
   );
 
   return (
-    <div className={classes.grow}>
+    <React.Fragment className={classes.grow}>
       <AppBar className={classes.appBar} position="static" >
         <Toolbar>
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <HomeIcon />
-          </IconButton>
-           <div className={classes.left} /> */}
            <Link
             variant="h6"
             underline="none"
@@ -217,7 +208,7 @@ export default function AppAppBar() {
             className={classes.desktopRight}
             underline="none"
             color="inherit"
-            href="/"
+            href="/tutorial"
           >
               <IconButton color="inherit">
                   <SchoolIcon />
@@ -263,26 +254,6 @@ export default function AppAppBar() {
               <p>Book An Appointment</p>
           </Link>
 
-            {/* <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton> */}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -299,6 +270,6 @@ export default function AppAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-    </div>
+      </React.Fragment>
   );
 }

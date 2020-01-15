@@ -14,9 +14,10 @@ import {
 
 const styles = theme => ({
     root: {
-        // color: 'red',
         background: 'rgb(245, 245, 245)',
-        // background: `url('https://i.imgur.com/ZXBtVw7.jpg') no-repeat center center`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     form: {
         width: '80%',
@@ -55,10 +56,10 @@ function ZenithContact(props) {
   
     return (
         <div className={classes.root}>
+            <section className={classes.form}>
             <Typography variant="h4" className={classes.title}>
                 Contact Us
             </Typography>
-            <section className={classes.form}>
             <Formik
                 initialValues={{ name: "", email: "", message: "" }}
                 onSubmit={(values, actions) => {
