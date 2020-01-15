@@ -1,20 +1,14 @@
 import React from 'react';
-import AppAppBar from './views/header';
-import ProductHero from './views/zenithMain';
-import ZenithServices from './views/zenithServices'
-import ZenithReviews from './views/zenithReviews';
-import ZenithContact from './views/zenithContact';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import LandingPage from './views/landingPage';
+import Tutorial from './views/tutorial';
 
-const App = () => {
-  return (
+
+const App = () => <Router>
     <div>
-      <AppAppBar />
-      < ProductHero />
-      <ZenithServices />
-      <ZenithReviews />
-      <ZenithContact />
+    <Route exact path='/' component={LandingPage} />
+    <Route path='/tutorial' component={Tutorial} />
     </div>
-  );
-}
+    </Router>;
 
 export default App;
