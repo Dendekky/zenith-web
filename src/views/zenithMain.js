@@ -5,8 +5,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ZenithMainLayout from './zenithMainLayout';
 
-const backgroundImage =
-  'https://res.cloudinary.com/dendekky/image/upload/v1578442737/bg1_x8kmyp.jpg';
+
+const backgroundImage = require('../assets/img/05.jpg');
 
 const styles = theme => ({
   background: {
@@ -35,7 +35,7 @@ function ProductHero(props) {
   return (
     <ZenithMainLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
-      <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
+      {/* <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" /> */}
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Zenith Educational Advancement Consult
       </Typography>
@@ -49,7 +49,7 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="/"
       >
         Register
       </Button>

@@ -8,16 +8,21 @@ import SchoolIcon from '@material-ui/icons/School';
 import PermScanWifiIcon from '@material-ui/icons/PermScanWifi';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
 
+const backgroundImage = require('../assets/img/07.jpg');
+
+
 const styles = theme => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-    background: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://res.cloudinary.com/dendekky/image/upload/v1573308286/samples/animals/reindeer.jpg")',
+    color: 'white',
+    background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${backgroundImage})`,
     // backgroundColor: theme.palette.secondary.light,
+    backgroundSize: 'cover',
   },
   container: {
-    marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(30),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
     display: 'flex',
     position: 'relative',
   },
@@ -27,18 +32,13 @@ const styles = theme => ({
     alignItems: 'center',
     padding: theme.spacing(0, 5),
   },
-  image: {
-    height: 55,
-  },
+  // image: {
+  //   height: 55,
+  // },
   title: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(5),
   },
-//   curvyLines: {
-//     pointerEvents: 'none',
-//     position: 'absolute',
-//     top: -180,
-//   },
 });
 
 function ZenithServices(props) {
@@ -47,11 +47,6 @@ function ZenithServices(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        {/* <img
-          src="https://res.cloudinary.com/dendekky/image/upload/v1573308286/samples/animals/reindeer.jpg"
-          className={classes.curvyLines}
-          alt="curvy lines"
-        /> */}
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
