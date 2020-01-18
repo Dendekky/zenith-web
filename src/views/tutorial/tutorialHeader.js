@@ -44,7 +44,7 @@ const TutorialHeader = () => {
                     </Tooltip>
                     }>
                   <NavDropdown title="TESTS" id="basic-nav-dropdown">
-                      <NavDropdown.Item href="#action/3.1">Random Fun Quiz</NavDropdown.Item>
+                      <NavDropdown.Item href="/randomtests">Random Fun Quiz</NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">Zenith Quiz</NavDropdown.Item>
                   </NavDropdown>
                   </OverlayTrigger>
