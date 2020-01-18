@@ -1,6 +1,6 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -13,7 +13,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import MenuIcon from '@material-ui/icons/Menu';
 import SchoolIcon from '@material-ui/icons/School';
 import PermScanWifiIcon from '@material-ui/icons/PermScanWifi';
 import EventAvailableIcon from '@material-ui/icons/EventAvailable';
@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
   appBar: {
-    background: '#1A202C',
+    background: '#EDF2F7',
+    color: 'black',
   },
     left: {
     flex: 1,
@@ -35,10 +36,11 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     // display: 'none',
-    fontSize: 24,
+    fontSize: 36,
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    textDecoration: 'none !important',
   },
   search: {
     position: 'relative',
@@ -75,16 +77,27 @@ const useStyles = makeStyles(theme => ({
       width: 200,
     },
   },
+  mobileRight: {
+    textDecoration: 'none !important',
+    color: 'inherit',
+  },
   desktopRight: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginRight: '2px',
+    // display: 'flex',
+    textAlign: 'center',
+    marginRight: '4px',
+    textDecoration: 'none !important',
+    color: 'inherit',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
   },
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      // alignItems: 'center',
+      // justifyContent: 'center',
     },
   },
   sectionMobile: {
@@ -148,32 +161,42 @@ export default function AppAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          {/* <Badge badgeContent={4} color="secondary"> */}
-            <SchoolIcon />
-          {/* </Badge> */}
-        </IconButton>
-        <p>Tutorial Services</p>
+            <Link
+            variant="h6"
+            className={classes.mobileRight}
+            href="/tutorial"
+            >
+              <p>Tutorial Services</p>
+          </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton color="inherit">
-            <PermScanWifiIcon />
-        </IconButton>
+          <Link
+            variant="h6"
+            className={classes.mobileRight}
+            href="/tutorial"
+            >
         <p>Internet Services</p>
+        </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton color="inherit">
-            <InfoIcon />
-        </IconButton>
+          <Link
+            variant="h6"
+            className={classes.mobileRight}
+            href="/tutorial"
+            >
         <p>About Us</p>
+        </Link>
       </MenuItem>
       <MenuItem>
-        <IconButton color="inherit">
-            <EventAvailableIcon />
-        </IconButton>
+            <Link
+            variant="h6"
+            className={classes.mobileRight}
+            href="/tutorial"
+            >
         <p>Book An Appointment</p>
+        </Link>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      {/* <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -183,7 +206,7 @@ export default function AppAppBar() {
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
-      </MenuItem>
+      </MenuItem> */}
     </Menu>
   );
 
@@ -204,53 +227,37 @@ export default function AppAppBar() {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <Link
-            // variant="h6"
+            variant="h6"
             className={classes.desktopRight}
-            underline="none"
-            color="inherit"
             href="/tutorial"
           >
-              <IconButton color="inherit">
                   <SchoolIcon />
-              </IconButton>
               <p>Tutorial Services</p>
           </Link>
 
           <Link
-            // variant="h6"
+            variant="h6"
             className={classes.desktopRight}
-            underline="none"
-            color="inherit"
             href="/"
           >
-              <IconButton color="inherit">
                   <PermScanWifiIcon />
-              </IconButton>
               <p>Internet Services</p>
           </Link>
 
           <Link
-            // variant="h6"
+            variant="h6"
             className={classes.desktopRight}
-            underline="none"
-            color="inherit"
             href="/"
           >
-              <IconButton color="inherit">
                   <InfoIcon />
-              </IconButton>
               <p>About Us</p>
           </Link>
           <Link
-            // variant="h6"
+            variant="h6"
             className={classes.desktopRight}
-            underline="none"
-            color="inherit"
             href="/"
           >
-              <IconButton color="inherit">
                   <EventAvailableIcon />
-              </IconButton>
               <p>Book An Appointment</p>
           </Link>
 
@@ -263,7 +270,7 @@ export default function AppAppBar() {
               onClick={handleMobileMenuOpen}
               color="inherit"
             >
-              <MoreIcon />
+              <MenuIcon />
             </IconButton>
           </div>
         </Toolbar>
