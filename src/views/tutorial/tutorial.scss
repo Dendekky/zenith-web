@@ -21,3 +21,13 @@
         // opacity: 0.5;
     }
 };
+
+.questionList {
+    display: flex;
+    flex-direction: row;
+    .identifier {
+        margin-right: 5px;
+    }
+}
+
+
