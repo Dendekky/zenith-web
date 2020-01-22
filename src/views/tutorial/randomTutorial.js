@@ -11,7 +11,7 @@ export default class RandomQuiz extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://opentdb.com/api.php?amount=10&category=19&type=boolean")
+    fetch("https://opentdb.com/api.php?amount=15&type=boolean")
       .then(response => response.json())
       .then(data => this.setState({ lists: data.results }));
   }
