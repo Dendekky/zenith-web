@@ -1,16 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import LandingPage from './views/landingPage';
-import Tutorial from './views/tutorial';
-import RandomQuiz from './views/tutorial/randomTutorial'
+import React from "react"
+import Router from "./Router"
+import "./components/@vuexy/rippleButton/RippleButton"
 
+import "react-perfect-scrollbar/dist/css/styles.css"
+import "prismjs/themes/prism-tomorrow.css"
 
-const App = () => <Router>
-    <div>
-    <Route exact path='/' component={LandingPage} />
-    <Route path='/tutorial' component={Tutorial} />
-    <Route path='/randomtests' component={RandomQuiz} />
-    </div>
-    </Router>;
+const App = props => {
+  return <Router />
+}
 
-export default App;
+export default App
