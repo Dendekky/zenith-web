@@ -994,80 +994,80 @@ const horizontalMenuConfig = [
       }
     ]
   },
-  {
-    id: "others",
-    title: "Others",
-    type: "dropdown",
-    icon: <Icon.MoreHorizontal size={16} />,
-    children: [
-      {
-        id: "menuLevels",
-        title: "Menu Levels",
-        icon: <Icon.Menu size={16} />,
-        type: "dropdown",
-        children: [
-          {
-            id: "secondLevel",
-            title: "Second Level",
-            icon: <Icon.Circle size={10} />,
-            type: "item",
-            navlink: "",
-            permissions: ["admin", "editor"]
-          },
-          {
-            id: "secondLevel1",
-            title: "Second Level",
-            icon: <Icon.Circle size={10} />,
-            type: "dropdown",
-            children: [
-              {
-                id: "ThirdLevel",
-                title: "Third Level",
-                icon: <Icon.Circle size={10} />,
-                type: "item",
-                navLink: "",
-                permissions: ["admin", "editor"]
-              },
-              {
-                id: "ThirdLevel1",
-                title: "Third Level",
-                icon: <Icon.Circle size={10} />,
-                type: "item",
-                navLink: "",
-                permissions: ["admin", "editor"]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: "disabledMenu",
-        title: "Disabled Menu",
-        icon: <Icon.EyeOff size={16} />,
-        type: "item",
-        navLink: "#",
-        permissions: ["admin", "editor"],
-        disabled: true
-      },
-      {
-        id: "documentation",
-        title: "Documentation",
-        icon: <Icon.Folder size={16} />,
-        type: "external-link",
-        navLink: "google.com",
-        permissions: ["admin", "editor"]
-      },
-      {
-        id: "raiseSupport",
-        title: "Raise Support",
-        icon: <Icon.LifeBuoy size={16} />,
-        type: "external-link",
-        newTab: true,
-        navLink: "https://pixinvent.ticksy.com/",
-        permissions: ["admin", "editor"]
-      }
-    ]
-  }
+  // {
+  //   id: "others",
+  //   title: "Others",
+  //   type: "dropdown",
+  //   icon: <Icon.MoreHorizontal size={16} />,
+  //   children: [
+  //     {
+  //       id: "menuLevels",
+  //       title: "Menu Levels",
+  //       icon: <Icon.Menu size={16} />,
+  //       type: "dropdown",
+  //       children: [
+  //         {
+  //           id: "secondLevel",
+  //           title: "Second Level",
+  //           icon: <Icon.Circle size={10} />,
+  //           type: "item",
+  //           navlink: "",
+  //           permissions: ["admin", "editor"]
+  //         },
+  //         {
+  //           id: "secondLevel1",
+  //           title: "Second Level",
+  //           icon: <Icon.Circle size={10} />,
+  //           type: "dropdown",
+  //           children: [
+  //             {
+  //               id: "ThirdLevel",
+  //               title: "Third Level",
+  //               icon: <Icon.Circle size={10} />,
+  //               type: "item",
+  //               navLink: "",
+  //               permissions: ["admin", "editor"]
+  //             },
+  //             {
+  //               id: "ThirdLevel1",
+  //               title: "Third Level",
+  //               icon: <Icon.Circle size={10} />,
+  //               type: "item",
+  //               navLink: "",
+  //               permissions: ["admin", "editor"]
+  //             }
+  //           ]
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       id: "disabledMenu",
+  //       title: "Disabled Menu",
+  //       icon: <Icon.EyeOff size={16} />,
+  //       type: "item",
+  //       navLink: "#",
+  //       permissions: ["admin", "editor"],
+  //       disabled: true
+  //     },
+  //     {
+  //       id: "documentation",
+  //       title: "Documentation",
+  //       icon: <Icon.Folder size={16} />,
+  //       type: "external-link",
+  //       navLink: "google.com",
+  //       permissions: ["admin", "editor"]
+  //     },
+  //     {
+  //       id: "raiseSupport",
+  //       title: "Raise Support",
+  //       icon: <Icon.LifeBuoy size={16} />,
+  //       type: "external-link",
+  //       newTab: true,
+  //       navLink: "https://pixinvent.ticksy.com/",
+  //       permissions: ["admin", "editor"]
+  //     }
+  //   ]
+  // }
 ]
 
 export default horizontalMenuConfig
